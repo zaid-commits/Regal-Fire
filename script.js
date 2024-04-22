@@ -35,3 +35,4 @@ toggleMenu.addEventListener('click', () => {
 //     setTimeout(typeWriter, speed);
 //   }
 // }
+

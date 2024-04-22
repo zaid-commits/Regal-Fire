@@ -325,4 +325,13 @@ footer {
         width: 100%;
         margin-top: 1rem;
     }
+
+    /* Move image down */
+    .about-content {
+        flex-direction: column; /* Change the direction to stack elements vertically */
+    }
+
+    .about-image {
+        margin-top: 1rem; /* Add some space between the text and the image */
+    }
 }

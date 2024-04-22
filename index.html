@@ -27,8 +27,8 @@
             </div>
         </nav>
         <div class="hero" id="home">
-            <h1 class="typed-out">We ensure quality !</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <h1 id="typed-text"></h1>
+            <p>Providing top-notch fire fighting and consulting services.</p>
             <a href="#contact" class="btn">Get a Quote</a>
         </div>
     </header>
@@ -39,17 +39,17 @@
                 <div class="service">
                     <i class="fas fa-fire-extinguisher"></i>
                     <h3>Fire Fighting</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur obcaecati soluta nostrum, adipisci quaerat odit.p>
+                    <p>Our experienced team is equipped to handle all types of fire emergencies with precision and efficiency.</p>
                 </div>
                 <div class="service">
                     <i class="fas fa-hard-hat"></i>
                     <h3>Fire Consulting</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, velit!.</p>
+                    <p>We provide comprehensive fire safety consulting services to ensure your premises meet all safety regulations.</p>
                 </div>
                 <div class="service">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Fire Protection</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque assumenda quisquam repellendus dolore, dolor iste.</p>
+                    <p>Our fire protection solutions are designed to safeguard your property and loved ones from potential fire hazards.</p>
                 </div>
             </div>
         </section>
@@ -57,8 +57,8 @@
             <h2>About Us</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima non saepe delectus magni eligendi, fugit corporis sequi inventore reprehenderit vitae!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima non saepe delectus magni eligendi, fugit corporis sequi inventore reprehenderit vitae!</p>
+                    <p>At Regal Fire, we are committed to providing top-quality fire fighting and consulting services. With years of experience and a team of highly skilled professionals, we strive to ensure the safety and well-being of our clients.</p>
+                    <p>Our mission is to protect lives, properties, and the environment through our comprehensive range of services. We take pride in our attention to detail, quick response times, and unwavering commitment to excellence.</p>
                 </div>
                 <div class="about-image">
                     <img src="https://via.placeholder.com/400x300" alt="About Image">
@@ -70,7 +70,7 @@
             <div class="testimonial-grid">
                 <div class="testimonial">
                     <i class="fas fa-quote-left"></i>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo id quo maxime temporibus repellat laborum quis cumque itaque eum..</p>
+                    <p>Regal Fire provided exceptional fire safety consulting services for our commercial property. Their experts were knowledgeable and professional, ensuring we met all the necessary regulations.</p>
                     <div class="client-info">
                         <h4>John Doe</h4>
                         <p>Business Owner</p>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="testimonial">
                     <i class="fas fa-quote-left"></i>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis architecto odio nihil officia nobis facilis pariatur dolores tempora excepturi.</p>
+                    <p>Their fire fighting team responded swiftly and efficiently during our emergency. I highly recommend Regal Fire for their top-notch services and commitment to safety.</p>
                     <div class="client-info">
                         <h4>Jane Smith</h4>
                         <p>Homeowner</p>
@@ -129,5 +129,16 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+    <script>
+        var typed = new Typed('#typed-text', {
+          strings: ['We Ensure Quality !'],
+          typeSpeed: 50,
+          showCursor: false, // Optional, hides the cursor
+        });
+      </script>
+      
+
 </body>
 </html> 

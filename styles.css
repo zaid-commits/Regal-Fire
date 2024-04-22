@@ -1,4 +1,10 @@
 /* Reset some default styles */
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -61,6 +67,7 @@ nav {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    
 }
 
 .hero p {

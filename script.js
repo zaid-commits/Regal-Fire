@@ -3,22 +3,22 @@
 
 const menuLinks = document.querySelectorAll('.menu a');
 
-menuLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = e.target.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-    });
-});
+// menuLinks.forEach(link => {
+//     link.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         const targetId = e.target.getAttribute('href');
+//         const targetElement = document.querySelector(targetId);
+//         targetElement.scrollIntoView({ behavior: 'smooth' });
+//     });
+// });
 
 
-const toggleMenu = document.querySelector('.toggle-menu');
-const menu = document.querySelector('.menu');
+// const toggleMenu = document.querySelector('.toggle-menu');
+// const menu = document.querySelector('.menu');
 
-toggleMenu.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
+// toggleMenu.addEventListener('click', () => {
+//     menu.classList.toggle('active');
+// });
 
 
 
@@ -36,3 +36,38 @@ toggleMenu.addEventListener('click', () => {
 //   }
 // }
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     const faqItems = document.querySelectorAll(".faq");
+
+//     faqItems.forEach(function(item) {
+//         item.addEventListener("click", function() {
+//             // Toggle the active class on the clicked FAQ item
+//             this.classList.toggle("active");
+//         });
+//     });
+// });
+
+// const faqItems = document.querySelectorAll('.faq-item');
+
+// faqItems.forEach(item => {
+//     const faqQuestion = item.querySelector('.faq-question');
+//     const faqAnswer = item.querySelector('.faq-answer');
+
+//     faqQuestion.addEventListener('click', () => {
+//         item.classList.toggle('active');
+//         faqAnswer.style.display = item.classList.contains('active') ? 'block' : 'none';
+//     });
+// });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(function (faqItem) {
+        const question = faqItem.querySelector(".faq-question");
+
+        question.addEventListener("click", function () {
+            faqItem.classList.toggle("active");
+        });
+    });
+});

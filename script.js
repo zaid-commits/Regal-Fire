@@ -20,6 +20,31 @@ const menuLinks = document.querySelectorAll('.menu a');
 //     menu.classList.toggle('active');
 // });
 
+//code for the counter 
+
+// <script>
+// document.addEventListener('DOMContentLoaded', () => {
+//     const counters = document.querySelectorAll('.counter');
+
+//     counters.forEach(counter => {
+//         const updateCounter = () => {
+//             const target = +counter.getAttribute('data-target');
+//             const count = +counter.innerText;
+
+//             const increment = target / 200; // Adjust the speed of the counter here
+
+//             if (count < target) {
+//                 counter.innerText = Math.ceil(count + increment);
+//                 setTimeout(updateCounter, 1);
+//             } else {
+//                 counter.innerText = target;
+//             }
+//         };
+
+//         updateCounter();
+//     });
+// });
+// </script>
 
 
 

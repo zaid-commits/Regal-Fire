@@ -9,15 +9,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="aboutus.css">
     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
 
-     
+        .counters-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+            background-color: #fff;
+            flex-wrap: wrap;
+        }
+
+        .counter-container {
+            text-align: center;
+            margin: 20px;
+            flex: 0 0 200px; /* Set a fixed width for responsiveness */
+        }
+
+        .counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .counter-container p {
+            font-size: 16px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><i class="fas fa-fire"></i> Regal Fire</a>
+                <a href="#"><i class="fas fa-fire"></i> Regal Fire</a>
             </div>
             <div class="menu">
                 <a href="#home">Home</a>
@@ -26,16 +54,19 @@
                 <a href="#blog">Blog</a>
                 <a href="#faqs">FAQs</a>
                 <a href="#testimonials">Testimonials</a>
-                <a href="#aboutus">About Us</a>
+                <a href="resources.html">Resources</a>
+                <a href="aboutus.html">About Us</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="toggle-menu">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
-      
     </header>
+
     <main>
+
+        
         <section class="about-section">
             <h1 class="section-title">About Us</h1>
             <div class="about-grid">
@@ -53,6 +84,32 @@
                 </div>
             </div>
         </section>
+
+        
+    <!-- Counters Section -->
+    <section class="counters-section">
+        <div class="counter-container">
+            <div class="counter" data-target="250">0</div>
+            <p>Projects Completed</p>
+        </div>
+        <div class="counter-container">
+            <div class="counter" data-target="15">0</div>
+            <p>Years of Experience</p>
+        </div>
+        <div class="counter-container">
+            <div class="counter" data-target="500">0</div>
+            <p>Satisfied Clients</p>
+        </div>
+        <div class="counter-container">
+            <div class="counter" data-target="20">0</div>
+            <p>Awards Won</p>
+        </div>
+        <div class="counter-container">
+            <div class="counter" data-target="100">0</div>
+            <p>Team Members</p>
+        </div>
+    </section>
+
 
         <section class="team section">
             <h2 class="section-title">Our Team</h2>
@@ -146,39 +203,64 @@
                     </div>
                 </section>
             </main>
-        
-            <footer>
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>Regal Fire</h3>
-                        <p>Committed to your safety.</p>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li> <a href="#home">Home</a></li> 
-                            <li> <a href="#services">Services</a></li> 
-                            <li> <a href="#team">Team</a></li> 
-                            <li> <a href="#blog">Blog</a></li> 
-                            <li> <a href="#faqs">FAQs</a></li> 
-                            <li> <a href="#testimonials">Testimonials</a></li> 
-                            <li> <a href="aboutus.html">About Us</a></li> 
-                            <li> <a href="#contact">Contact</a></li> 
-                        </div>
-                    <div class="footer-section">
-                        <h3>Contact Us</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> First Floor, Shop F-112, Fantasia Multiplex & Intertainment Complex, Plot No 47, Sector 30A, Vashi, Navi Mumbai, Thane, Maharashtra, 400703 </p><br>
-                        <p><i class="fas fa-phone"></i> +917786079999 </p><br>
-                        <p><i class="fas fa-envelope"></i> regalfire.in@gmail.com </p><br>
-                    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Regal Fire</h3>
+                <p>Committed to your safety.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li> <a href="#home">Home</a></li> 
+                    <li> <a href="#services">Services</a></li> 
+                    <li> <a href="#team">Team</a></li> 
+                    <li> <a href="#blog">Blog</a></li> 
+                    <li> <a href="#faqs">FAQs</a></li> 
+                    <li> <a href="#testimonials">Testimonials</a></li> 
+                    <li> <a href="#contact">Contact</a></li> 
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2023 Regal Fire. All rights reserved.</p>
-                </div>
-            </footer>
-        
-            <!-- <script src="script.js">
-                   AOS.init();
-            </script> -->
-        </body>
-        </html>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> First Floor, Shop F-112, Fantasia Multiplex & Intertainment Complex, Plot No 47, Sector 30A, Vashi, Navi Mumbai, Thane, Maharashtra, 400703 </p><br>
+                <p><i class="fas fa-phone"></i> +917786079999 </p><br>
+                <p><i class="fas fa-envelope"></i> regalfire.in@gmail.com </p><br>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Regal Fire. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            let count = +counter.innerText;
+            const initialSpeed = 100; // Initial speed
+            const increment = Math.ceil(target / initialSpeed);
+
+            if (count < target) {
+                if (target - count < 100) { // If close to the target, slow down
+                    count += 1;
+                } else {
+                    count += increment;
+                }
+                counter.innerText = count;
+                setTimeout(updateCounter, 15); // Adjust the timeout for smoother animation
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCounter();
+    });
+});
+
+                
+    </script>
+</body>
+</html>

@@ -1,6 +1,9 @@
 html {
     scroll-behavior: smooth;
 }
+.counters-container{
+    color:#e53935;
+}
 
 * {
     margin: 0;

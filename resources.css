@@ -1,4 +1,21 @@
-
+/* sticky header */
+.sticky {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+    /* background-color: #fff; Optional: Set a background color */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visibility */
+    padding: 15px;
+    background-color: #e53935;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    margin: 0 ;
+    
+}
 /* Header styles */
 #current{
     color: #ffc107;
@@ -136,13 +153,13 @@ header {
     z-index: 1000;
 }
 
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-}
+} */
 
 .logo a {
     color: #fff;

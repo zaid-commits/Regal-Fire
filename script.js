@@ -65,6 +65,36 @@ document.onreadystatechange = function () {
     document.querySelector('.loader-wrapper').style.display = 'none';
   }
   
+// counter
+    document.addEventListener('DOMContentLoaded', () => {
+        const visitorCount = document.getElementById('visitor-count');
+        let count = localStorage.getItem('visitorCount');
+
+        if (!count) {
+            count = 0;
+        }
+
+        count = parseInt(count) + 1;
+        localStorage.setItem('visitorCount', count);
+        
+        const animateCounter = (element, targetCount) => {
+            let currentCount = 0;
+            const duration = 3000; // 3 seconds
+            const steps = 100;
+            const increment = Math.ceil(targetCount / steps);
+
+            const counterAnimation = setInterval(() => {
+                currentCount += increment;
+                if (currentCount >= targetCount) {
+                    currentCount = targetCount;
+                    clearInterval(counterAnimation);
+                }
+                element.textContent = currentCount.toLocaleString();
+            }, duration / steps);
+        };
+
+        animateCounter(visitorCount, count);
+    });
 
 
 // var i = 0;

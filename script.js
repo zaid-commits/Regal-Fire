@@ -46,7 +46,25 @@ const menuLinks = document.querySelectorAll('.menu a');
 // });
 // </script>
 
-
+// script.js
+document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+      // Hide loader when page is fully loaded
+      hideLoader();
+    } else {
+      // Show loader when page is loading
+      showLoader();
+    }
+  };
+  
+  function showLoader() {
+    document.querySelector('.loader-wrapper').style.display = 'flex';
+  }
+  
+  function hideLoader() {
+    document.querySelector('.loader-wrapper').style.display = 'none';
+  }
+  
 
 
 // var i = 0;

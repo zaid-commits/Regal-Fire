@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Regal Fire</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+      }
+
+      
+/* Header styles */
+header {
+    background: linear-gradient(to bottom, #e53935, #d81b60);
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 1.5rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffc107;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #ffc107;
+}
+
+.menu a:hover::before,
+.menu a.active::before {
+    transform: scaleX(1);
+}
+
+.toggle-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+
+      /* Contact section */
+      #contact {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: #fff;
+      }
+
+      #contact h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #e53935;
+      }
+
+      form {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #f5f5f5;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+      }
+
+      .form-group textarea {
+        height: 150px;
+      }
+
+      form button {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        background-color: #e53935;
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      form button:hover {
+        background-color: #c62828;
+      }
+
+      /* Contact Info section */
+      #contact-info {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: #f5f5f5;
+      }
+
+      #contact-info h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #e53935;
+      }
+
+      #contact-info p {
+        margin-bottom: 1rem;
+      }
+
+      #contact-info i {
+        color: #e53935;
+        margin-right: 0.5rem;
+      }
+
+      /* Map section */
+      #map {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: #fff;
+      }
+
+      #map h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #e53935;
+      }
+
+      #map iframe {
+        max-width: 100%;
+        height: 450px;
+        border: none;
+      }
+
+      /* Social Media section */
+      #social-media {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: #f5f5f5;
+      }
+
+      #social-media h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #e53935;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+      }
+
+      .social-link {
+        color: #e53935;
+        font-size: 2rem;
+        margin: 0 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .social-link:hover {
+        color: #c62828;
+      }
+
+      /* FAQ section */
+      #faq {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: #fff;
+      }
+
+      #faq h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #e53935;
+      }
+
+      .faq-item {
+        background-color: #f5f5f5;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+        padding: 1rem;
+        text-align: left;
+      }
+
+      .faq-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #e53935;
+      }
+
+      /* Working Hours section */
+      #working-hours {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: #f5f5f5;
+      }
+
+      #working-hours h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #e53935;
+      }
+
+      #working-hours p {
+        margin-bottom: 0.5rem;
+      }
+
+
+        /* Newsletter Subscription Section */
+        #newsletter {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        #newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #e53935;
+        }
+
+        #newsletter p {
+            margin-bottom: 2rem;
+        }
+
+        #newsletter form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #newsletter .form-group {
+            display: flex;
+            justify-content: center;
+        }
+
+        #newsletter input[type="email"] {
+            width: 70%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem 0 0 0.25rem;
+            font-size: 1rem;
+        }
+
+        #newsletter button {
+            width: 30%;
+            padding: 0.75rem;
+            background-color: #e53935;
+            color: #fff;
+            border: none;
+            border-radius: 0 0.25rem 0.25rem 0;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #newsletter button:hover {
+            background-color: #c62828;
+        }
+
+        /* Careers Section */
+        #careers {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        #careers h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #e53935;
+        }
+
+        #careers p {
+            margin-bottom: 2rem;
+        }
+
+        #careers .job-listing {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        #careers .job-listing h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e53935;
+        }
+
+        #careers .job-listing p {
+            margin-bottom: 1rem;
+        }
+
+        #careers .job-listing a {
+            display: inline-block;
+            background-color: #e53935;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #careers .job-listing a:hover {
+            background-color: #c62828;
+        }
+        
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffc107; /* Match the yellow accent color from the homepage */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .toggle-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        background-color: #d81b60; /* Match the gradient color from the homepage */
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 0.5rem 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        margin: 0.5rem 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-fire"></i> Regal Fire</a>
+            </div>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#team">Team</a>
+                <a href="#blog">Blog</a>
+                <a href="#faqs">FAQs</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="resources.html">Resources</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="toggle-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="your-web3forms-endpoint" method="POST">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </section>
+          <section id="contact-info">
+            <h2>Contact Information</h2>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> First Floor, Shop F-112,
+              Fantasia Multiplex & Intertainment Complex, Plot No 47, Sector 30A,
+              Vashi, Navi Mumbai, Thane, Maharashtra, 400703
+            </p>
+            <p><i class="fas fa-phone"></i> +917786079999</p>
+            <p><i class="fas fa-envelope"></i> regalfire.in@gmail.com</p>
+          </section>
+          <section id="map">
+            <h2>Our Location</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </section>
+          <section id="social-media">
+            <h2>Follow Us</h2>
+            <div class="social-links">
+                <div class="card">
+                    <a class="socialContainer containerOne" href="#">
+                      <svg viewBox="0 0 16 16" class="socialSvg instagramSvg"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg>
+                    </a>
+                    
+                    <a class="socialContainer containerTwo" href="#">
+                      <svg viewBox="0 0 16 16" class="socialSvg twitterSvg"> <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path> </svg>              </a>
+                      
+                    <a class="socialContainer containerThree" href="#">
+                      <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+                    </a>
+                    
+                    <a class="socialContainer containerFour" href="#">
+                      <svg viewBox="0 0 16 16" class="socialSvg whatsappSvg"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path> </svg>
+                    </a>
+                  </div>             
+                  
+                  
+            </div>
+          </section>
+          <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <h3>Question 1?</h3>
+              <p>Answer to question 1.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Question 2?</h3>
+              <p>Answer to question 2.</p>
+            </div>
+          </section>
+          <section id="working-hours">
+            <h2>Working Hours</h2>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p>Saturday: 10:00 AM - 4:00 PM</p>
+            <p>Sunday: Closed</p>
+          </section>
+
+        <section id="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay up-to-date with the latest news, promotions, and fire safety tips.</p>
+            <form>
+                <div class="form-group">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="careers">
+            <h2>Career Opportunities</h2>
+            <p>Join our team and be part of a dynamic organization dedicated to fire safety and protection.</p>
+            <div class="job-listing">
+                <h3>Fire Inspector</h3>
+                <p>We are seeking an experienced fire inspector to conduct thorough inspections and ensure compliance with fire safety regulations.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="job-listing">
+                <h3>Fire Consultant</h3>
+                <p>We are looking for a passionate fire consultant to provide expert advice and develop customized fire safety solutions for our clients.</p>
+                <a href="#">Apply Now</a>
+            </div>
+        </section>
+
+        <!-- Existing sections -->
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Regal Fire</h3>
+                <p>Committed to your safety.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li> <a href="#home">Home</a></li> 
+                    <li> <a href="#services">Services</a></li> 
+                    <li> <a href="#team">Team</a></li> 
+                    <li> <a href="#blog">Blog</a></li> 
+                    <li> <a href="#faqs">FAQs</a></li> 
+                    <li> <a href="#testimonials">Testimonials</a></li> 
+                    <li> <a href="#contact">Contact</a></li> 
+                </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> First Floor, Shop F-112, Fantasia Multiplex & Intertainment Complex, Plot No 47, Sector 30A, Vashi, Navi Mumbai, Thane, Maharashtra, 400703 </p><br>
+                <p><i class="fas fa-phone"></i> +917786079999 </p><br>
+                <p><i class="fas fa-envelope"></i> regalfire.in@gmail.com </p><br>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Regal Fire. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

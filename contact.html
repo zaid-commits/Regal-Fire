@@ -648,7 +648,7 @@ footer {
 
         <section id="map">
             <h2>Our Location</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.9525194962107!2d73.00024827520502!3d19.06582508213672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c196697308e1%3A0xa39506e3eceaa123!2sFORBID%20FIRE!5e0!3m2!1sen!2sin!4v1717787708079!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
         <section id="social-media">
@@ -702,10 +702,11 @@ footer {
             <div class="container">
                 <h2>Subscribe to Our Newsletter</h2>
                 <p>Stay up-to-date with the latest news, promotions, and fire safety tips.</p>
-                <form>
+                <form id="subscribeForm" action="https://api.web3forms.com/submit" method="POST">
                     <div class="form-group">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
+                            <input type="hidden" name="access_key" value="077a1a21-a547-40e9-a4dc-c724ec5fa3d9">
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
                     </div>
                 </form>
             </div>
@@ -760,5 +761,6 @@ footer {
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

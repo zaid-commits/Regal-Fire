@@ -350,7 +350,6 @@ footer {
     background-color: #e53935; /* Match the red color from the homepage */
     color: white;
 }
-
 @media (max-width: 768px) {
     .about-grid,
     .testimonial-grid,
@@ -369,7 +368,7 @@ footer {
         top: 4rem;
         left: 0;
         width: 100%;
-        background-color: #d81b60; /* Match the gradient color from the homepage */
+        background-color: #d81b60;
         padding: 1rem;
         text-align: center;
     }
@@ -386,8 +385,44 @@ footer {
         margin: 0.5rem 0;
     }
 
-    .menu.active {
-        display: flex;
+    .menu a::before {
+        display: none; /* Remove underline animation on small screens */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .team-grid,
+    .owner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .owner-card img {
+        height: 15rem; /* Reduce image size for better fit */
+    }
+
+    .about-section,
+    .team,
+    .owner,
+    .testimonials,
+    .contact-section {
+        padding: 2rem 1rem; /* Reduce padding for better fit */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 2rem;
     }
 }
 

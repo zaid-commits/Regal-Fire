@@ -329,6 +329,7 @@ nav {
 }
 
 .toggle-menu {
+    color: #ffc107;
     display: none;
     cursor: pointer;
     position: absolute;

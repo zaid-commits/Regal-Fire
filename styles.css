@@ -7,7 +7,7 @@
     /* background-color: #fff; Optional: Set a background color */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visibility */
     padding: 15px;
-    background-color: #e53935;
+    background-color: #1F2041;
     margin-top: 0px;
     
     
@@ -30,7 +30,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(0deg, transparent, #e53935, #e53935);
+    background: linear-gradient(0deg, transparent, #1F2041, #1F2041);
     transform-origin: bottom right;
     animation: border-glow 10s linear infinite;
 }
@@ -64,7 +64,7 @@
 
 .counter-icon {
     font-size: clamp(2rem, 4vw, 3rem);
-    color: #e53935;
+    color: #ffc107;
     margin-right: 1.5rem;
     position: relative;
     z-index: 2;
@@ -90,7 +90,7 @@
 .counter-value {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: bold;
-    color: #e53935;
+    color: #ffc107;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     display: inline-block;
@@ -138,11 +138,11 @@ button {
     text-align: center;
     font-weight: bold;
     padding: 0.7em 2em;
-    border: 3px solid red;
+    border: 3px solid #1F2041;
     border-radius: 2px;
     position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
-    color: #e53935;
+    color: #1F2041;
     text-decoration: none;
     transition: 0.3s ease all;
     z-index: 1;
@@ -157,7 +157,7 @@ button {
     bottom: 0;
     opacity: 0;
     content: '';
-    background-color: #e53935;
+    background-color: #1F2041;
     z-index: -1;
   }
   
@@ -390,7 +390,7 @@ nav {
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
 }
 
 .services-grid {
@@ -414,14 +414,14 @@ nav {
 
 .service i {
     font-size: 2rem;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
     margin-bottom: 1rem;
 }
 
 .service h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
 }
 main{
     background-color: #fff;
@@ -439,7 +439,7 @@ main{
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
 }
 
 .team-grid {
@@ -474,7 +474,7 @@ main{
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
 }
 
 .blog-grid {
@@ -508,7 +508,7 @@ main{
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
 }
 
 .faq-item {
@@ -527,14 +527,14 @@ main{
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    background-color: #e53935; /* Match the red color from the homepage */
+    background-color: #1F2041; /* Match the red color from the homepage */
     color: #fff;
     transition: background-color 0.3s ease;
     position: relative;
 }
 
 .faq-question:hover {
-    background-color: #c62828; /* Darker shade of red */
+    background-color: #1F2041; /* Darker shade of red */
 }.faq-question::after {
     content: '\002B';
     font-size: 1.5rem;
@@ -548,7 +548,7 @@ main{
 
 .faq-answer {
     background-color: #f8f8f8; /* Match the lighter background color from the homepage */
-    border-top: 2px solid #e53935; /* Match the red color from the homepage */
+    border-top: 2px solid #1F2041; /* Match the red color from the homepage */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
@@ -576,7 +576,7 @@ main{
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
 }
 
 .testimonial-grid {
@@ -596,7 +596,7 @@ main{
 
 .testimonial i {
     font-size: 2rem;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
@@ -613,7 +613,7 @@ main{
 
 /* Contact section */
 .contact {
-    background-color: #e53935; /* Match the red color from the homepage */
+    background-color: #1F2041; /* Match the red color from the homepage */
     color: #fff;
     padding: 4rem 2rem;
 }
@@ -663,7 +663,7 @@ form {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
-    background-color: #e53935; /* Match the red color from the homepage */
+    background-color: #1F2041; /* Match the red color from the homepage */
     color: #fff;
     border: none;
     border-radius: 0.25rem;
@@ -672,7 +672,7 @@ form {
 }
 
 .btn:hover {
-    background-color: #c62828; /* Darker shade of red */
+    background-color: #1F2041; /* Darker shade of red */
 }
 
 /* Footer styles */
@@ -724,13 +724,13 @@ footer {
 
 /* Highlighting the text */
 ::selection {
-    background-color: #e53935; /* Match the red color from the homepage */
+    background-color: #1F2041; /* Match the red color from the homepage */
     color: white; /* Change the text color for better readability */
 }
 
 /* Change the text selection color for Firefox */
 ::-moz-selection {
-    background-color: #e53935; /* Match the red color from the homepage */
+    background-color: #1F2041; /* Match the red color from the homepage */
     color: white;
 }
 

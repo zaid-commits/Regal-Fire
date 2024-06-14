@@ -747,7 +747,8 @@ footer {
         top: 4rem;
         left: 0;
         width: 100%;
-        background-color: #d81b60; /* Match the gradient color from the homepage */
+        background-color: #1F2041;
+        color: #ffc107; /* Match the gradient color from the homepage */
         padding: 1rem;
         text-align: center;
     }

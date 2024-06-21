@@ -7,7 +7,7 @@
     /* background-color: #fff; Optional: Set a background color */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visibility */
     padding: 15px;
-    background-color: #e53935;
+    background-color: #1F2041;
     margin-top: 0px;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 .counters-container{
-    color:#e53935;
+    color:#1F2041;
 }
 
 * {
@@ -30,14 +30,15 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter';
+    font-weight: 500;
     line-height: 1.6;
     color: #333;
     background-color: #f5f5f5;
 }
 
 header {
-    background: linear-gradient(to bottom, #e53935, #d81b60);
+    background: linear-gradient(to bottom, #1F2041, #d81b60);
     color: #fff;
     padding: 1rem;
     position: relative;
@@ -121,7 +122,7 @@ nav {
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
 }
 
 .team-grid {
@@ -158,7 +159,7 @@ nav {
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e53935;
+    color: #1F2041;
 }
 
 .owner-grid {
@@ -187,7 +188,7 @@ nav {
 .owner-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #e53935;
+    color: #1F2041;
 }
 
 .owner-card p {
@@ -222,7 +223,7 @@ nav {
 .about-item h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #e53935;
+    color: #1F2041;
 }
 
 /* Testimonials section */
@@ -237,7 +238,7 @@ nav {
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
 }
 
 .testimonial-grid {
@@ -257,7 +258,7 @@ nav {
 
 .testimonial i {
     font-size: 2rem;
-    color: #e53935; /* Match the red color from the homepage */
+    color: #1F2041; /* Match the red color from the homepage */
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
@@ -273,7 +274,7 @@ nav {
 }
 
 .contact-section {
-    background-color: #e53935;
+    background-color: #1F2041;
     color: #fff;
     padding: 4rem 2rem;
     text-align: center;
@@ -301,7 +302,7 @@ nav {
 
 .contact-item i {
     font-size: 2rem;
-    color: #e53935;
+    color: #1F2041;
     margin-bottom: 1rem;
 }
 
@@ -358,13 +359,13 @@ footer {
 
 /* Highlighting the text */
 ::selection {
-    background-color: #e53935; /* Match the red color from the homepage */
+    background-color: #1F2041; /* Match the red color from the homepage */
     color: white; /* Change the text color for better readability */
 }
 
 /* Change the text selection color for Firefox */
 ::-moz-selection {
-    background-color: #e53935; /* Match the red color from the homepage */
+    background-color: #1F2041; /* Match the red color from the homepage */
     color: white;
 }
 @media (max-width: 768px) {
@@ -445,7 +446,7 @@ footer {
 
 .section-title {
     font-size: 2.5rem;
-    color: #e53935;
+    color: #1F2041;
 }
 
 #current {

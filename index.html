@@ -1,301 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regal Fire</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="Images/logos-transformed.jpeg" type="image/x-icon">
+    <title>Regal Fire - Premier Fire Safety Solutions</title>
+    <link rel="shortcut icon" href="Images/regalfirelogo.jpeg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1F2041',
+                        secondary: '#FFC107',
+                        accent: '#FF6B6B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        .custom-shape-divider-bottom-1687780065 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .custom-shape-divider-bottom-1687780065 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .custom-shape-divider-bottom-1687780065 .shape-fill {
+            fill: #FFFFFF;
+        }
+    </style>
 </head>
-<body>
-
-    <nav class="sticky">
-        <div class="logo">
-            <a href="index.html#home" style="padding-left: 20px;"><i class="fas fa-fire"></i> Regal Fire</a>
-        </div>
-        <div class="menu">
-            <li><a href="#home" style="color:#ffc107;">Home</a></li>
-            <li class="dropdown">
-                <a href="#services">Services</a>
-                <div class="dropdown-content">
-                    <a href="#fire-fighting">Fire Fighting</a>
-                    <a href="#fire-consulting">Fire Consulting</a>
-                    <a href="#fire-protection">Fire Protection</a>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <header class="fixed w-full bg-white shadow-md z-50 transition duration-300" id="header">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="indexx.html" class="text-2xl font-bold text-primary">
+                    <i class="fas fa-fire mr-2 text-secondary"></i>Regal Fire
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-primary hover:text-secondary transition duration-300">Home</a>
+                    <a href="#services" class="text-primary hover:text-secondary transition duration-300">Services</a>
+                    <a href="#about" class="text-primary hover:text-secondary transition duration-300">About</a>
+                    <a href="#team" class="text-primary hover:text-secondary transition duration-300">Team</a>
+                    <a href="#testimonials" class="text-primary hover:text-secondary transition duration-300">Testimonials</a>
+                    <a href="#blog" class="text-primary hover:text-secondary transition duration-300">Blog</a>
+                    <a href="#contact" class="text-primary hover:text-secondary transition duration-300">Contact</a>
                 </div>
-            <!-- <li><a href="#team">Team</a></li> -->
-        <li><a href="#blog">Blog</a></li>
-        </li>
-        <li class="dropdown">
-        <a href="#">Extras</a>
-            <div class="dropdown-content">
-                <a href="resources.html">Resources</a>
-                <a href="#faqs">FAQs</a>
-                <a href="#testimonials">Testimonials</a>
+                <button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </li>
-            <!-- <li><a href="#faqs">FAQs</a></li> -->
-            <!-- <li><a href="#testimonials">Testimonials</a></li> -->
-            <!-- <li><a href="resources.html">Resources</a></li> -->
-            <li class="dropdown">
-                <a href="aboutus.html">About Us</a>
-                <div class="dropdown-content">
-                    <a href="#team">Our Team</a>
-                    <a href="aboutus.html#about-item">Company Overview</a>
-                    <a href="aboutus.html#about-item">Company Mission</a>
-                    <a href="aboutus.html#about-item">Company Vision</a>
-                </div>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
+        </nav>
+        <div class="hidden md:hidden bg-white p-4" id="mobile-menu">
+            <a href="#home" class="block py-2 text-primary hover:text-secondary">Home</a>
+            <a href="#services" class="block py-2 text-primary hover:text-secondary">Services</a>
+            <a href="#about" class="block py-2 text-primary hover:text-secondary">About</a>
+            <a href="#team" class="block py-2 text-primary hover:text-secondary">Team</a>
+            <a href="#testimonials" class="block py-2 text-primary hover:text-secondary">Testimonials</a>
+            <a href="#blog" class="block py-2 text-primary hover:text-secondary">Blog</a>
+            <a href="#contact" class="block py-2 text-primary hover:text-secondary">Contact</a>
         </div>
-        <div class="toggle-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-    </nav>
-    
-    
-        <div class="hero" id="home">
-            <h1 id="typed-text"></h1>
-            <p>Providing top-notch fire fighting and consulting services.</p>
-            <a href="#contact" class="btn">Get a Quote</a>
-        </div>
+    </header>
 
     <main>
-        <section class="services section" id="services">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <i class="fas fa-fire-extinguisher"></i>
-                    <h3>Fire Fighting</h3>
-                    <p style>Our experienced team is equipped to handle all types of fire emergencies with precision and efficiency. We use state-of-the-art equipment and follow industry best practices to ensure a rapid and effective response.</p><br>
-                    <a href="firefighting.html">
-                        <button>Explore Service</button>
-                      </a> 
-                </div>
-                <div class="service">
-                    <i class="fas fa-hard-hat"></i>
-                    <h3>Fire Consulting</h3>
-                    <p>We provide comprehensive fire safety consulting services to ensure your premises meet all safety regulations. Our experts conduct thorough risk assessments and provide customized solutions to mitigate potential fire hazards.</p><br>
-                    <a href="fireconsulting.html">
-                        <button>Explore Service</button>
-                      </a>
-                </div>
-                <div class="service">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Fire Equipment Installation</h3>
-                    <p>Ensure your premises are well-protected with our comprehensive fire equipment installation services. We provide top-quality installation of fire alarms, sprinkler systems, and other essential safety equipment.</p><br><br>
-                    <a href="installation.html">
-                        <button>Explore Service</button>
-                      </a>
-                </div>
-            </div>
-        </section>
-        <div id="allservices">
-            <a href="services.html"> 
-                <button>Explore All Services</button>
-            </a>
-        </div>
-        <section class="team section" id="team">
-            <h2 class="section-title">Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="Images/collegeuni.jpg" alt="Team Member">
-                    <h3>Person1</h3>
-                    <p>Fire Chief</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, alias.</p>
-                </div>
-                <div class="team-member">
-                    <img src="Images/collegeuni.jpg" alt="Team Member">
-                    <h3>Person2</h3>
-                    <p>Lorem, ipsum dolor.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minima aperiam nemo placeat odit veniam </p>
-                </div>
-                <div class="team-member">
-                    <img src="Images/collegeuni.jpg" alt="Team Member">
-                    <h3>Michael Lorem, ipsum.</h3>
-                    <p>Fire Protection Engineer</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, qui? Laborum error culpa vero repudiandae!</p>
-                </div>
-            </div>
-        </section>
-        <section class="blog section" id="blog">
-            <h2 class="section-title">Our Blog</h2>
-            <div class="blog-grid">
-                <div class="blog-post">
-                    <img src="Images/howfireprotectedisyourhome.jpg" alt="Blog Post">
-                    <h3>Fire Safety Tips for the Home</h3>
-                    <p>Learn about simple yet effective ways to reduce the risk of fire in your home and keep your family safe.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="blog-post">
-                    <img src="Images/rulesandregulations.jpeg" alt="Blog Post">
-                    <h3>New Fire Regulations for Commercial Buildings</h3>
-                    <p>Stay up-to-date with the latest fire regulations for commercial buildings and how they can impact your business.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="blog-post">
-                    <img src="https://www.redcross.org/content/dam/redcross/get-help/fire-safety/home-fire-safety-respond-header-1920x703.jpg.transform/1288/q70/feature/image.jpeg" alt="Blog Post">
-                    <h3>Know What to Do Before, During, and After a Fire</h3>
-                    <p>Learn how to prepare for, manage during, and respond after a fire with comprehensive guidelines covering safety measures, evacuation plans, and recovery steps.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
-        </section>
-        <section class="faqs section" id="faqs">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3 class="faq-question">How often should fire extinguishers be inspected?</h3>
-                    <p class="faq-answer">Fire extinguishers should be inspected annually by a professional to ensure they are in proper working condition and have not been discharged or tampered with.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">Do I need a fire alarm system for my business?</h3>
-                    <p class="faq-answer">Most commercial buildings are required by law to have a fire alarm system installed. Our team can help you determine the specific requirements for your business and recommend the appropriate system.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">What should I do in case of a fire emergency?</h3>
-                    <p class="faq-answer">In the event of a fire emergency, remain calm, evacuate the premises immediately, and call emergency services. Do not attempt to fight the fire unless it is small and you have been properly trained.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="testimonials section" id="testimonials">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Regal Fire provided exceptional fire safety consulting services for our commercial property. Their experts were knowledgeable and professional, ensuring we met all the necessary regulations. They also helped us implement effective fire protection measures, giving us peace of mind.</p>
-                    <div class="client-info">
-                        <h4>Zaid Rakhange</h4>
-                        <p>Business Owner</p>
+        <section id="home" class="pt-24 pb-32 md:pt-32 md:pb-48 bg-primary text-white relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Protecting Lives, Safeguarding Property</h1>
+                        <p class="text-xl mb-8 opacity-80">Premier fire safety solutions for your peace of mind.</p>
+                        <a href="#contact" class="bg-secondary text-primary px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition duration-300 inline-block">Get a Free Consultation</a>
                     </div>
-                </div>
-                <div class="testimonial">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Their fire fighting team responded swiftly and efficiently during our emergency. They minimized the damage and ensured the safety of our family. We are grateful for their professionalism and dedication.</p>
-                    <div class="client-info">
-                        <h4>Sarah Lee</h4>
-                        <p>Homeowner</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Regal Fire's expertise in fire protection solutions has been invaluable for our manufacturing facility. Their team conducted a thorough risk assessment and implemented a comprehensive fire protection system tailored to our specific needs.</p>
-                    <div class="client-info">
-                        <h4>Michael Johnson</h4>
-                        <p>Factory Manager</p>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Firefighter" class="rounded-lg shadow-2xl w-full h-auto max-w-md mx-auto">
                     </div>
                 </div>
             </div>
+            <!-- <div class="custom-shape-divider-bottom-1687780065">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div> -->
         </section>
-        <section id="visitor-counter">
-            <div class="container">
-                <div class="counter-wrapper">
-                    <div class="counter-icon">
-                        <i class="fas fa-users"></i>
+
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16 text-primary">Our Comprehensive Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-fire-extinguisher text-5xl text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Fire Fighting</h3>
+                        <p class="mb-6 text-gray-600">State-of-the-art equipment and trained professionals to combat any fire emergency.</p>
+                        <a href="firefighting.html" class="text-secondary font-bold hover:underline">Learn More →</a>
                     </div>
-                    <div class="counter-details">
-                        <h3>Happy Visitors</h3>
-                        <div class="counter-value" id="visitor-count">0</div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-clipboard-check text-5xl text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Fire Safety Consulting</h3>
+                        <p class="mb-6 text-gray-600">Expert advice on fire prevention, risk assessment, and safety compliance.</p>
+                        <a href="fireconsulting.html" class="text-secondary font-bold hover:underline">Learn More →</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-tools text-5xl text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Equipment Installation</h3>
+                        <p class="mb-6 text-gray-600">Professional installation of fire alarms, sprinklers, and other safety systems.</p>
+                        <a href="installation.html" class="text-secondary font-bold hover:underline">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Get a Quote</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="077a1a21-a547-40e9-a4dc-c724ec5fa3d9">
-                <div class="form-group">
-                    <label for="name">Your Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+        <section id="about" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://images.unsplash.com/photo-1533305018385-9b7ac6e6615f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmlyZSUyMHNhZmV0eXxlbnwwfHwwfHx8MA%3D%3D" alt="About Regal Fire" class="rounded-lg shadow-2xl w-full h-auto max-w-md mx-auto">
+                    </div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <h2 class="text-4xl font-bold mb-8 text-primary">About Regal Fire</h2>
+                        <p class="mb-6 text-gray-600 leading-relaxed">With over 20 years of experience, Regal Fire is committed to providing top-tier fire safety solutions. Our team of certified professionals ensures the highest standards of safety for businesses and residences alike.</p>
+                        <p class="mb-8 text-gray-600 leading-relaxed">We combine cutting-edge technology with proven methodologies to deliver comprehensive fire protection services that save lives and protect property.</p>
+                        <a href="#" class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition duration-300 inline-block">Learn Our Story</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+        </section>
+
+        <section id="team" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16 text-primary">Meet Our Expert Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 text-center">
+                        <img src="Images/collegeuni.jpg" alt="Team Member" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-secondary">
+                        <h3 class="text-2xl font-bold mb-2 text-primary">Zaid the Great</h3>
+                        <p class="text-gray-600 mb-4">Fire Safety Director</p>
+                        <p class="text-gray-500">20+ years of experience in fire safety management and consulting.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 text-center">
+                        <img src="Images/collegeuni.jpg" alt="Team Member" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-secondary">
+                        <h3 class="text-2xl font-bold mb-2 text-primary">Zaid the Great</h3>
+                        <p class="text-gray-600 mb-4">Fire Protection Engineer</p>
+                        <p class="text-gray-500">Specialist in designing advanced fire protection systems for complex structures.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 text-center">
+                        <img src="Images/collegeuni.jpg" alt="Team Member" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-secondary">
+                        <h3 class="text-2xl font-bold mb-2 text-primary">Zaid the Great</h3>
+                        <p class="text-gray-600 mb-4">Emergency Response Coordinator</p>
+                        <p class="text-gray-500">Expert in developing and implementing emergency response strategies.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Your Phone Number</label>
-                    <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16 text-primary">What Our Clients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="flex items-center mb-6">
+                            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Client" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-primary">John Doe</h3>
+                                <p class="text-gray-600">CEO of TechCorp</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Regal Fire's expertise in fire safety consulting has been invaluable for our business. Their thorough assessment and recommendations have significantly improved our safety measures."</p>
+                        <div class="text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="flex items-center mb-6">
+                            <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Client" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-primary">Jane Smith</h3>
+                                <p class="text-gray-600">Property Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The fire equipment installation by Regal Fire was professional and efficient. Their team ensured minimal disruption to our daily operations while significantly upgrading our safety systems."</p>
+                        <div class="text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="flex items-center mb-6">
+                            <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Client" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-primary">Robert Johnson</h3>
+                                <p class="text-gray-600">School Principal</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"We feel much safer knowing our school is protected by Regal Fire's systems. Their team's dedication to safety and education has been impressive."</p>
+                        <div class="text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="service">Select Service</label>
-                    <select id="service" name="service" required>
-                        <option value="fire-fighting">Fire Fighting</option>
-                        <option value="fire-consulting">Fire Consulting</option>
-                        <option value="fire-protection">Fire Protection</option>
-                    </select>
+            </div>
+        </section>
+
+        <section id="blog" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16 text-primary">Latest from Our Blog</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="Images/howfireprotectedisyourhome.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Top 5 Fire Safety Tips for Homeowners</h3>
+                            <p class="text-gray-600 mb-4">Learn how to keep your home safe from fire hazards with these essential tips.</p>
+                            <a href="#" class="text-secondary font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="Images/rulesandregulations.jpeg" alt="Blog Post" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary">The Importance of Regular Fire Drills</h3>
+                            <p class="text-gray-600 mb-4">Discover why fire drills are crucial for workplace safety and how to conduct them effectively.</p>
+                            <a href="#" class="text-secondary font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Blog Post" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Advancements in Fire Suppression Technology</h3>
+                            <p class="text-gray-600 mb-4">Explore the latest innovations in fire suppression systems and how they're improving safety.</p>
+                            <a href="#" class="text-secondary font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-primary text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">Contact Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+                        <p class="mb-4">Have questions or need a consultation? Reach out to us today.</p>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-map-marker-alt mr-2"></i>F-112, Fantasia Business Park, Vashi ,400708 </li>
+                            <li><i class="fas fa-phone mr-2"></i>+91 7786079999</li>
+                            <li><i class="fas fa-envelope mr-2"></i>regalfire.mumbai@gmail.com</li>
+                        </ul>
+                    </div>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full p-2 rounded text-gray-800" required>
+                        <input type="email" placeholder="Your Email" class="w-full p-2 rounded text-gray-800" required>
+                        <textarea placeholder="Your Message" class="w-full p-2 rounded text-gray-800" rows="4" required></textarea>
+                        <button type="submit" class="bg-secondary text-primary px-6 py-2 rounded font-bold hover:bg-opacity-90 transition duration-300">Send Message</button>
+                    </form>
                 </div>
-                <button>Submit</button>
-            </form>
+            </div>
         </section>
     </main>
-    <footer>
 
-        
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Regal Fire</h3>
-                <p>Committed to your safety.</p>
-                
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li> <a href="#home">Home</a></li> 
-                    <li> <a href="#services">Services</a></li> 
-                    <li> <a href="#team">Team</a></li> 
-                    <li> <a href="#blog">Blog</a></li> 
-                    <li> <a href="#faqs">FAQs</a></li> 
-                    <li> <a href="#testimonials">Testimonials</a></li> 
-                    <li> <a href="#contact">Contact</a></li> 
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Regal Fire</h3>
+                    <p class="text-gray-400">Protecting lives and property with premier fire safety solutions.</p>
                 </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> First Floor, Shop F-112, Fantasia Multiplex & Intertainment Complex, Plot No 47, Sector 30A, Vashi, Navi Mumbai, Thane, Maharashtra, 400703 </p><br>
-                <p><i class="fas fa-phone"></i> +917786079999 </p><br>
-                <p><i class="fas fa-envelope"></i> regalfire.mumbai@gmail.com </p><br>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-secondary transition duration-300">Home</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition duration-300">Services</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition duration-300">About</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-secondary transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-secondary transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-secondary transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-secondary transition duration-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Regal Fire. All rights reserved.</p>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Regal Fire. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-    
-    <div class="loader"></div>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
     <script>
-        AOS.init();
-    </script>
-    <script>
-        
-        const toggleMenu = document.querySelector('.toggle-menu');
-        const menu = document.querySelector('.menu');
-        toggleMenu.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
-    <script>
-        var typed = new Typed('#typed-text', {
-          strings: ['Welcome to Regal Fire !'],
-          typeSpeed: 50,
-          showCursor: false, // Optional, hides the cursor
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        
-      </script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-      
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('bg-white', 'shadow-md');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-white', 'shadow-md');
+                header.classList.add('bg-transparent');
+            }
+        });
+    </script>
 </body>
 </html>
